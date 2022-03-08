@@ -47,9 +47,11 @@ def fruits():
     imgCodeEnd = "')}}"
     
     fruitList = [
-        {'fruitName' : 'Apple', 'imageLoc' : 'apple.png', 'altText' : 'picture of an apple'},
+        {'fruitName' : 'Apple', 'imageLoc' : "<img src='{{url_for('static',filename='img/apple.png')}}'>", 'altText' : 'picture of an apple'},
         {'fruitName' : 'Blackberry', 'imageLoc' : 'blackberry.png', 'altText' : 'picture of blackberries'}
     ]
+
+    "{{url_for('static',filename='img/apple.png')}}"
 
     return render_template("fruits.html", display_fruitList = fruitList, display_imgCodeStart = imgCodeStart, display_imgCodeEnd = imgCodeEnd)
 

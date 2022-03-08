@@ -31,7 +31,7 @@
             {% for f in display_fruitList %}
                 <p>{{f['fruitName']}}</p>
                 <img src="{{url_for('static',filename='img/apple.png')}}">
-                {{f['imageLoc']|safe}}
+                {{f['imageLoc']|safe }}
             {% endfor %}
 
             <!-- <table> 
